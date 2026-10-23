@@ -4,31 +4,29 @@
 <head>
     <meta charset="UTF8">
     <meta name="viewport" content="widht=device-width" initial-scale="1.0">
-    <link rel="stylesheet" href="tool.css">
+    <link rel="stylesheet" href="css/tool.css">
 </head>
 
 <body>
     <header id="header">
-        <h1 id="UTest">UTest | API Testing Tool</h1>
+        <h1 id="UTest">UTest | <span>API Testing Tool</span></h1>
         <nav class="nav-items">
             <a href="#landing.html">Home-></a>
         </nav>
     </header>
     <main class="main">
-       <h1>Test APIs. <br> Understand responses.</h1>
+       <h1 id="test">Test APIs. <br> Understand responses.</h1>
        ___________________________________________________________________________________________________
-       <h2>Request</h2>
-       <form action="POST">
-        <div>
-            <select name="" id="">
+       <h2 id="request">Request</h2>
+       <form class="form" action="POST">
+        <div id="input">
+            <select name="method" id="method" required>
                 <option value="">GET</option>
                 <option value="">POST</option>
                 <option value="">PUT</option>
                 <option value="">PATCH</option>
                 <option value="">DELETE</option> 
             </select>
-        </div>
-        <div>
             <input type="text" placeholder="Enter API URL...">
         </div>
         <h3>Request body: Optional</h3>

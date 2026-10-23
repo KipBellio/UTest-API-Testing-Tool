@@ -37,21 +37,56 @@ span{
     font-weight: bold;
 }
 #request{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     margin: 0;
-}
-#form{
-
 }
 #input{
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 }
-#method{
+#method, #url{
     border: rgb(155, 83, 83) solid ;
     border-radius: 2rem;
-    padding: 0.8rem;
+    padding: 0.4rem;
     margin-top: 1rem;
+    padding-right: 5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+}
+#RB{
+    font-size: 2rem;
+}
+#request-container{
+    display: block;
+}
+#json{
+    padding-right: 25rem;
+    padding-bottom: 15rem;
+    border: rgb(155, 83, 83) solid;
+    border-radius: 1rem;
+    background-color: rgb(250, 245, 245);
+    margin-bottom: 1rem;
+}
+#sendr{
+    background-color: rgb(85, 4, 4);
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+#rpanel{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+#rbody{
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+#status{
+    font-size: 2rem;
+    
 }

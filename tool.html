@@ -16,7 +16,6 @@
     </header>
     <main class="main">
        <h1 id="test">Test APIs. <br> Understand responses.</h1>
-       ___________________________________________________________________________________________________
        <h2 id="request">Request</h2>
        <form class="form" action="POST">
         <div id="input">
@@ -27,28 +26,26 @@
                 <option value="">PATCH</option>
                 <option value="">DELETE</option> 
             </select>
-            <input type="text" placeholder="Enter API URL...">
+            <input type="text" placeholder="Enter API URL..." id="url">
         </div>
-        <h3>Request body: Optional</h3>
-        <div>
-            <input type="text" placeholder="Enter json">
-            <button>Send request</button>
+        <h3 id="RB">Request body: Optional</h3>
+        <div id="request-container">
+            <input type="text" placeholder="" id="json">
         </div>
+        <button id="sendr">Send request</button>
        </form>
-       ___________________________________________________________________________________________________
        <div>
-       <h3>Response panel</h3>
-       <h4>Response body</h4>
-       <p>Status</p>
+       <h3 id="rpanel">Response panel</h3>
+       <h4 id="rbody">Response body</h4>
+       <p id="status">Status:</p>
        </div>
        <div class="response-body"></div>
-       ___________________________________________________________________________________________________
        <div>
-        <h3>Request history </h3>
+        <h3 id="rhistory">Request history </h3>
        </div>
        <div class="response-history"></div>
     </main>
-    <footer>
+    <footer id="footer">
         <div>
                 Copyright @2026 | UTest API Tool | Roben Duncan
             </div>

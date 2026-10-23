@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: "Inconsolata", monospace;
 }
 #header{
     background-color: rgb(85, 4, 4);
@@ -18,7 +19,7 @@ body{
 #UTest{
     color: white;
     font-size: 2rem;
-    padding-left: 1rem;
+    padding-left: 0;
 }
 span{
     font-size: 1rem;
@@ -33,6 +34,11 @@ span{
     margin: 8rem 1rem;
 }
 #test{
+    font-size: 4rem;
+    font-weight: bold;
+}
+#span{
+    color: rgb(165, 5, 5);
     font-size: 4rem;
     font-weight: bold;
 }
@@ -108,11 +114,11 @@ span{
 }
 #footer{
     background-color: rgb(85, 4, 4);
-    padding-top: 2.5rem;
+    padding-top: 1rem;
 }
 #Copyright{
     display: flex;
     justify-content: center;
     color: white;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }

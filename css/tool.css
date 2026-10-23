@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: "Inconsolata", monospace;
 }
 #header{
     background-color: rgb(85, 4, 4);
@@ -36,6 +37,11 @@ span{
     font-size: 4rem;
     font-weight: bold;
 }
+#span{
+    color: rgb(165, 5, 5);
+    font-size: 4rem;
+    font-weight: bold;
+}
 #request{
     font-size: 3rem;
     font-weight: bold;
@@ -47,46 +53,68 @@ span{
     gap: 2rem;
 }
 #method, #url{
-    border: rgb(155, 83, 83) solid ;
+    border: rgb(107, 101, 101) solid ;
     border-radius: 2rem;
     padding: 0.4rem;
     margin-top: 1rem;
-    padding-right: 5rem;
+    padding-right: 3rem;
     background-color: white;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 #RB{
     font-size: 2rem;
 }
-#request-container{
-    display: block;
-}
 #json{
-    padding-right: 25rem;
     padding-bottom: 15rem;
-    border: rgb(155, 83, 83) solid;
-    border-radius: 1rem;
-    background-color: rgb(250, 245, 245);
+    border: rgb(107, 101, 101) solid ;
+    border-radius: 0.5rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 #sendr{
     background-color: rgb(85, 4, 4);
     padding: 0.5rem;
+    border-radius: 1rem;
     color: white;
     font-size: 1.5rem;
-    border-radius: 1rem;
 }
 #rpanel{
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
 }
 #rbody{
     font-size: 2rem;
-    margin-bottom: 0;
+    margin: 0;
 }
 #status{
     font-size: 2rem;
-    
+    margin-bottom: 1rem;
+}
+.response-body{
+    padding-bottom: 30rem;
+    border: rgb(107, 101, 101) solid ;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+#rhistory{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.response-history{
+    padding-bottom: 20rem;
+    border: rgb(107, 101, 101) solid ;
+    border-radius: 0.5rem;
+}
+#footer{
+    background-color: rgb(85, 4, 4);
+    padding-top: 1rem;
+}
+#Copyright{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-bottom: 1rem;
 }

@@ -1,0 +1,15 @@
+#header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(85, 4, 4);
+}
+#UTest{
+    color: white;
+    padding-left: 2rem;
+}
+.nav-items a{
+    color: white;
+    padding-right: 2rem;
+}

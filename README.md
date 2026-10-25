@@ -5,9 +5,13 @@ UTest API Testing Tool
 A simple webtool that allows users to test APIs for their functionality by inputting a HTTP method and a URL link together with a request body for GET requests, inspecting responses and errors, and reusing, editing and deleting their request history all in one place.
 
 ## Live demo link
-* Figma wireframe link: 
+* Figma wireframe link: https://www.figma.com/design/DvqGLWNGuC7QPEQTzEw0Ra/UTest-API-Tool?node-id=12-4&t=02c1fjdGlfSvvN9J-1
+
 * Live application link:
-* GitHub repo link:
+
+* GitHub repo link: https://github.com/KipBellio/UTest-API-Testing-Tool
+
+* Backend server link:  https://utest-api-testing-tool.onrender.com
 
 ## Features list
 - Send requests with all five common HTTP methods: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`

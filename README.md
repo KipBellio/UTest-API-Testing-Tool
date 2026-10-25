@@ -13,6 +13,9 @@ A simple webtool that allows users to test APIs for their functionality by input
 
 * Backend server link:  https://utest-api-testing-tool.onrender.com
 
+* Primary API used - in this case to test if our system can really validate a functioning API
+- https://jsonplaceholder.typicode.com/posts/
+
 ## Features list
 - Send requests with all five common HTTP methods: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`
 - Editable request body (JSON) for non-GET methods

@@ -36,6 +36,7 @@ span{
 #test{
     font-size: 4rem;
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 #span{
     color: rgb(165, 5, 5);
@@ -43,35 +44,79 @@ span{
     font-weight: bold;
 }
 #request{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 0;
 }
-#input{
+
+#input {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-#method, #url{
-    border: rgb(107, 101, 101) solid ;
-    border-radius: 2rem;
-    padding: 0.4rem;
+    flex-wrap: wrap; 
+    gap: 1.5rem;
+    width: 40%;
     margin-top: 1rem;
-    padding-right: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Shared styles for both */
+#method, #url {
+    border: rgb(107, 101, 101) solid;
+    border-radius: 2rem;
+    padding: 0.4rem 1rem; /* Changed: 1rem is better than 3rem so it doesn't break */
     background-color: white;
     color: black;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    box-sizing: border-box; /* IMPORTANT: Keeps padding inside the width */
+}
+
+/* Specific styles */
+#method {
+    width: 120px; /* Fixed width for the dropdown */
+    flex-shrink: 0; /* Prevents the dropdown from squishing */
+}
+
+#url {
+    flex: 1; /* Takes up remaining space */
+    min-width: 200px; /* Drops to a new line if screen gets smaller than this */
 }
 #RB{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 #json{
-    padding-bottom: 15rem;
-    border: rgb(107, 101, 101) solid ;
     border-radius: 0.5rem;
+    background-color: #1a1717;
+    color: #ffffff;
+    font-size: 14px;
+    border: rgb(107, 101, 101) solid ;
+    min-height: 150px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    width: 60%;
     margin-bottom: 1rem;
-    width: 100%;
+    display: block;            /* Forces it onto its own line */
+    padding: 10px;             /* Keeps text away from the edges */
+    font-family: monospace;    /* Aligns JSON brackets and quotes perfectly */
+    resize: vertical;   
 }
+.response-body{
+   background-color: #1a1717; 
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 0.5rem;
+    font-family: "Inconsolata", monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Keeps formatting but wraps long text */
+    min-height: 150px;
+    border: rgb(107, 101, 101) solid ;
+}
+/* Syntax Highlighting Colors */
+.json-key { color: #9cdcfe; }       /* Light Blue */
+.json-string { color: #ce9178; }    /* Orange/Red */
+.json-number { color: #b5cea8; }    /* Light Green */
+.json-boolean { color: #569cd6; }   /* Blue */
+.json-null { color: #569cd6; }      /* Blue */
+
 #sendr{
     background-color: rgb(85, 4, 4);
     padding: 0.5rem;
@@ -93,36 +138,82 @@ span{
     margin-bottom: 1rem;
 }
 
-.response-body {
-    background-color: #1e1e1e; 
-    color: #d4d4d4;
-    padding: 15px;
-    border-radius: 0.5rem;
-    font-family: "Inconsolata", monospace;
-    font-size: 14px;
-    overflow-x: auto;
-    white-space: pre-wrap; /* Keeps formatting but wraps long text */
-    min-height: 150px;
-    border: rgb(107, 101, 101) solid ;
-}
-
-/* Syntax Highlighting Colors */
-.json-key { color: #9cdcfe; }       /* Light Blue */
-.json-string { color: #ce9178; }    /* Orange/Red */
-.json-number { color: #b5cea8; }    /* Light Green */
-.json-boolean { color: #569cd6; }   /* Blue */
-.json-null { color: #569cd6; }      /* Blue */
-
 #rhistory{
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
-.response-history{
+/*.response-history{
     padding-bottom: 20rem;
     border: rgb(107, 101, 101) solid ;
     border-radius: 0.5rem;
+}*/
+.response-history {
+    border: 1px solid rgb(107, 101, 101);
+    border-radius: 0.5rem;
+    background-color: #f9f9f9; /* Slight grey background */
+    max-height: 300px;         /* The key: limits height */
+    overflow-y: auto;          /* Adds scrollbar only when needed */
+    padding: 0;                /* Remove padding so items touch the edges */
+    margin-top: 1rem;
+    font-family: "Inconsolata", monospace;
 }
+
+/* Style the scrollbar to look modern (Optional but looks great) */
+.response-history::-webkit-scrollbar {
+    width: 8px;
+}
+.response-history::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0.5rem;
+}
+.response-history::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0.5rem;
+}
+.response-history::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Style the individual history items */
+.response-history div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #c79292;
+    transition: background-color 0.2s;
+}
+
+.response-history div:last-child {
+    border-bottom: none;
+}
+
+.response-history div:hover {
+    background-color: #eaeaea;
+}
+
+.reuse-btn, .del-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.reuse-btn:hover {
+    background-color: #0edb3e; 
+    color: #155724;
+}
+
+.del-btn:hover {
+    background-color: #d41122; 
+    color: #721c24;
+}
+
 #footer{
     background-color: rgb(85, 4, 4);
     padding-top: 1rem;

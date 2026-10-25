@@ -11,6 +11,6 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 server.use(router);
 
-server.listen(port, () => {
+server.listen(port, '0.0.0.0',() => {
     console.log(`JSON Server running on port ${port}`);
 });

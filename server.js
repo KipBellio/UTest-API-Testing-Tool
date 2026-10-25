@@ -1,18 +1,23 @@
 import jsonServer from 'json-server';
+import http from 'http';
 
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
 
-// Force the middleware to bind to all interfaces
-const middlewares = jsonServer.defaults({ host: '0.0.0.0' });
-
+// Force the port from Render, default to 3001 locally
 const port = process.env.PORT || 3001;
 
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
 server.use(router);
 
-// Keep the 0.0.0.0 here too
-server.listen(port, '0.0.0.0', () => {
+// Create the app instance
+const app = server;
+
+// Bind explicitly to 0.0.0.0 using Node's http module
+const httpServer = http.createServer(app);
+
+httpServer.listen(port, '0.0.0.0', () => {
     console.log(`JSON Server running on http://0.0.0.0:${port}`);
 });

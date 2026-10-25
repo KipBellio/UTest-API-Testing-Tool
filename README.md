@@ -7,7 +7,7 @@ A simple webtool that allows users to test APIs for their functionality by input
 ## Live demo link
 * Figma wireframe link: https://www.figma.com/design/DvqGLWNGuC7QPEQTzEw0Ra/UTest-API-Tool?node-id=12-4&t=02c1fjdGlfSvvN9J-1
 
-* Live application link:
+* Live application link: https://utest-api-testing-tool.netlify.app/
 
 * GitHub repo link: https://github.com/KipBellio/UTest-API-Testing-Tool
 

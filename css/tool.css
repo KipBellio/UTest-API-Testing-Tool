@@ -92,12 +92,27 @@ span{
     font-size: 2rem;
     margin-bottom: 1rem;
 }
-.response-body{
-    padding-bottom: 30rem;
-    border: rgb(107, 101, 101) solid ;
+
+.response-body {
+    background-color: #1e1e1e; 
+    color: #d4d4d4;
+    padding: 15px;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    font-family: "Inconsolata", monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Keeps formatting but wraps long text */
+    min-height: 150px;
+    border: rgb(107, 101, 101) solid ;
 }
+
+/* Syntax Highlighting Colors */
+.json-key { color: #9cdcfe; }       /* Light Blue */
+.json-string { color: #ce9178; }    /* Orange/Red */
+.json-number { color: #b5cea8; }    /* Light Green */
+.json-boolean { color: #569cd6; }   /* Blue */
+.json-null { color: #569cd6; }      /* Blue */
+
 #rhistory{
     font-size: 3rem;
     font-weight: bold;

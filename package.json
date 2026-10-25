@@ -1,0 +1,17 @@
+{
+  "name": "utest",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3001",
+    "start:prod": "node server.js",
+    "test": "node tests/utils.test.js && node tests/state.test.js && node tests/api.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+  
+}

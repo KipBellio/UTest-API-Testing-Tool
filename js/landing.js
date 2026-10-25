@@ -1,3 +1,5 @@
+// js/landing.js
+// Logic for the navbtn, herobtn and ctabtn
 document.addEventListener('DOMContentLoaded', () => {
     
     const toolPageUrl = 'tool.html'; 

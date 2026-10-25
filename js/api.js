@@ -2,13 +2,13 @@
 
 export async function sendApiRequest(method, url, bodyText) {
     
-    // 1. YOUR Cloudflare Worker URL
+    // My Cloudflare Worker URL
     const workerUrl = 'https://utestproxy.kipkoechdun676.workers.dev/';
     
-    // 2. Combine your worker with the target URL
+    // Worker and my target url
     const proxyUrl = `${workerUrl}?url=${encodeURIComponent(url)}`;
 
-    // 3. Setup Fetch Options
+    // Fetch options
     const options = {
         method: method,
         headers: {
@@ -16,7 +16,7 @@ export async function sendApiRequest(method, url, bodyText) {
         }
     };
 
-    // Only add body if it's not a GET request and if there is text
+    // Add request body if not a GET method and body is there
     if (method !== 'GET' && bodyText) {
         options.body = bodyText;
     }
@@ -24,7 +24,7 @@ export async function sendApiRequest(method, url, bodyText) {
     const startTime = performance.now();
     
     try {
-        // 4. Make the Request using YOUR Worker
+        // Make the request using my worker
         const response = await fetch(proxyUrl, options);
         const endTime = performance.now();
         const timeTaken = Math.round(endTime - startTime);

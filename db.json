@@ -1,0 +1,18 @@
+{
+  "history": [
+    {
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "body": "",
+      "timestamp": "2026-10-25T19:24:07.516Z",
+      "id": 1
+    },
+    {
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "body": "",
+      "timestamp": "2026-10-25T19:24:24.406Z",
+      "id": 2
+    }
+  ]
+}

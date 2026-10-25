@@ -53,3 +53,8 @@ I wrote unit tests for pure logic (utils.js), mock-based tests for fetch in api.
 
 * How to structure JavaScript into ES Modules
 I split one giant file into tool.js, api.js, state.js, and utils.js, with clean import/export boundaries. I learned that when a function becomes async (like state.js after adding fetch), every caller must await it — and that DOM-bound modules (tool.js) are hard to unit test compared to pure modules (utils.js).
+
+## Known limitations
+The deployed backend runs on Render's free plan, which uses an ephemeral filesystem. This means the server's db.json file is rebuilt from the version committed to GitHub whenever the container restarts. A restart happens automatically after about 15 minutes of inactivity (the free tier sleeps), on every redeploy, or if the service crashes.
+
+As a result, requests saved, edited, or deleted through the deployed frontend will persist during a session and across page reloads, but will be reset if the service sleeps or redeploys. For full production persistence, a paid Render plan with a persistent disk, or a dedicated database service such as PostgreSQL or MongoDB Atlas, would be required.

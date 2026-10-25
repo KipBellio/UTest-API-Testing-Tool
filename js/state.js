@@ -1,6 +1,8 @@
 // js/state.js
 
-const API_URL = 'http://localhost:3001/history';
+const API_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:3001/history'
+    : 'https://utest-api-testing-tool.onrender.com/history';
 
 export async function getHistory() {
     try {

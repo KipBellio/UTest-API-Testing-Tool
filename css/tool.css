@@ -89,12 +89,13 @@ span{
     min-height: 200px;
     white-space: pre-wrap;
     overflow-x: auto;
-    width: 98%;
+    width: 100%;
     margin-bottom: 1rem;
     display: block;            
     padding: 10px;             
-    font-family: monospace;    
-    resize: vertical;   
+    font-family: "Inconsolata", monospace;    
+    resize: vertical;  
+    box-sizing: border-box; 
 }
 .response-body{
    background-color: #000000; 
@@ -104,6 +105,8 @@ span{
     font-family: "Inconsolata", monospace;
     font-size: 14px;
     overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
     white-space: pre-wrap; 
     min-height: 300px;
     border: rgb(107, 101, 101) solid ;

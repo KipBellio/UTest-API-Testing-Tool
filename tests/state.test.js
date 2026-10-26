@@ -1,5 +1,7 @@
 // tests/state.test.js
-
+globalThis.window = {
+    location: { hostname: 'localhost' }
+};
 // Mock fetch globally before importing state.js
 let mockResponse = [];
 let mockOk = true;
